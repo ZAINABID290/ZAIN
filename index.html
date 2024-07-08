@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="This is a website dedicated to Zain's Protfolio.">
+    <meta name="google-site-verification" content="sqTO_F43clWwoCuWFq7Eg8KOmCrhlZ76re1-poaE4Fc" />
+    <link rel="shortcut icon" href="/light.ico" type="image/x-icon">
+</head>
+<script>
+    // Add the 'loaded' class to the body after the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        document.body.classList.add('loaded');
+    });
+
+
+
+    // Target all elements with the 'reveal' class
+    function revealElements() {
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    // Call the function when the page loads and on scroll
+    window.addEventListener('load', revealElements);
+    window.addEventListener('scroll', revealElements);
+
+
+    function revealSections() {
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    // Call the function when the page loads and on scroll
+    window.addEventListener('load', revealSections);
+    window.addEventListener('scroll', revealSections);
+
+
+
+
+    // Smooth scroll to the third section when clicking a link
+    document.querySelector('a[href="#third"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector('.below').scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+
+
+</script>
+
+<body>
+
+    <section class="nava" class="cover">
+        <nav>
+            <ul>
+                <li class="upperr"><a href="#">HOME</a></li>
+                <li class="upperr"><a href="#last_section">CONTACT</a></li>
+                <li class="upperr"><a href="#last_section">ABOUT</a></li>
+
+            </ul>
+        </nav>
+    </section>
+    <main class="fade-in ">
+
+
+        <section class="reveal">
+            <h1 class="cold_text" id="ZAIN">Zain</h1>
+
+
+            <h2 class="cold_text , " id="typewriter-text">About me...</h2>
+            <p>Hy,I'm Zain a web developer with love for clean code and elegant solutions. While i may not be a
+                seasoned
+                pro, my enthusiasm and dedication drive me to create a exceptional websites. Whether it's making a
+                professional pefect design website ot diving into the backgroud logic for website. I make sure that
+                i
+                thrice on turning ideas into functional, user-friendly experience.</p>
+            <h3 class="cold_text">Skills</h3>
+            <div class="skilll">
+                <ul>
+                    <li class="under">
+                        <p>HTML</p>
+                    </li>
+                    <li class="under">
+                        <p>CSS</p>
+                    </li>
+                    <li class="under">
+                        <p>Poblem solving</p>
+                    </li>
+                    <li class="under">
+                        <p>Responsive Design</p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="reveal" class="cover">
+            <img src="/zain_pic.png" alt="zain_profile_picture">
+        </section>
+        <div class="wrapper-main ">
+            <section class="container reveal last_section" class="below" id="last_section">
+                <!-- Your existing content -->
+                <div class="icons">
+                    <a href="https://instagram.com/zain_abid_11290/"><img src="/insta_logo.png" alt="instagram"
+                            class="icons_for_contact"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100083974368770"><img src="/facebook_logo.png" alt="facebook"
+                            class="icons_for_contact"></a>
+                     <a href="https://www.tiktok.com/@zainabid2035"><img src="tiktok_logo.png" alt="facebook"
+                                class="icons_for_contact"></a>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>
