@@ -1,0 +1,326 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+ /* Mr Beast font is down one*/
+ @import url('https://fonts.cdnfonts.com/css/komika-axis');
+
+
+
+ body {
+     opacity: 0;
+     transition: opacity 1.5s ease-out;
+
+ }
+
+ body.loaded {
+     opacity: 1;
+ }
+
+
+ * {
+     margin: 0px;
+     padding: 0px;
+
+
+ }
+
+ /* Center the header */
+ .nava {
+     text-align: center;
+
+     padding: 40px;
+     border-radius: 40px;
+
+
+
+ }
+
+ .under {
+     text-decoration: none;
+ }
+
+
+ /* Style the navigation links */
+ nav ul {
+     list-style: none;
+     padding: 0;
+ }
+
+ nav li {
+     display: inline-block;
+     margin-right: 20px;
+     /* Adjust as needed */
+ }
+
+ nav a {
+     text-decoration: none;
+     /* you can change the font of the text in header in this area  */
+     font-family: 'Komika Axis', sans-serif;
+     font-size: 35px;
+
+     color: #333;
+
+     transition: color 0.3s ease;
+     /* Smooth color transition on hover */
+ }
+
+ nav a:hover {
+     color: #f7cd46;
+     /* Vibrant yellow color on hover */
+     transform: scale(1.05);
+     /* Slight scale-up effect on hover */
+
+ }
+
+ /* the header part is in top */
+
+ /* The main section starts from here */
+ main {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 20px;
+ }
+
+ .index-about-flex {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 20px;
+ }
+
+ section {
+     flex: 1;
+     padding: 20px;
+     background-color: #f9f9f9;
+     border-radius: 10px;
+     margin: 10px;
+ }
+
+ img {
+     max-width: 100%;
+     height: auto;
+     border-radius: 10px;
+ }
+
+ /* Adjust for image on the right */
+ @media only screen and (min-width: 768px) {
+     section {
+         flex-direction: row-reverse;
+     }
+ }
+
+
+
+ .cold_text#ZAIN {
+     text-align: center;
+     background: linear-gradient(45deg, #ff6b6b, #74f0ed, #ea445a, #f7cd46, #1abc9c, #ff9a8b);
+     background-size: 200% auto;
+     color: transparent;
+     background-clip: text;
+     -webkit-background-clip: text;
+     animation: animated_gradient_text 12s infinite linear;
+ }
+
+ @keyframes animated_gradient_text {
+
+     0%,
+     100% {
+         background-position: 0% 50%;
+     }
+
+     25% {
+         background-position: 100% 50%;
+     }
+
+     50% {
+         background-position: 0% 50%;
+     }
+
+     75% {
+         background-position: 100% 50%;
+     }
+ }
+
+
+
+
+
+
+ .cold_text {
+     font-family: 'Komika Axis', sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     padding: 3px;
+ }
+
+ .cold_text#ZAIN {
+     text-align: center;
+     font-size: 100px;
+ }
+
+
+
+ body {
+     background: linear-gradient(45deg, #ee6055, #60d394, #aaf683, #ffd97d, #ff9b85);
+     background-size: 200% auto;
+     animation: animated_gradient_bg 5s infinite linear;
+ }
+
+ @keyframes animated_gradient_bg {
+
+     0%,
+     100% {
+         background-position: 0% 50%;
+     }
+
+     25% {
+         background-position: 100% 50%;
+     }
+
+     50% {
+         background-position: 0% 50%;
+     }
+
+     75% {
+         background-position: 100% 50%;
+     }
+ }
+
+
+
+ /* Style the contact dashboard */
+ .contact-dashboard {
+     display: none;
+     /* Add your styling for the contact dashboard */
+ }
+
+ /* Show the contact dashboard when the button is clicked */
+ .show-contact-dashboard {
+     display: block;
+
+ }
+
+
+ p {
+     font-family: "Lato", sans-serif;
+     font-weight: 100;
+     font-style: inherit;
+     font-weight: 480;
+     font-size: 17px;
+ }
+
+
+ #typewriter-text {
+     overflow: hidden;
+     white-space: nowrap;
+     border-right: .15em solid white;
+     /* Typewriter cursor */
+     margin: 0 auto;
+     letter-spacing: .01em;
+     animation: typing 10s steps(100000, end) infinite, blink-caret 1s step-end infinite;
+ }
+
+ @keyframes typing {
+     from {
+         width: 0;
+     }
+
+     to {
+         width: 100%;
+     }
+ }
+
+ @keyframes blink-caret {
+
+     from,
+     to {
+         border-color: transparent;
+     }
+
+     50% {
+         border-color: white;
+     }
+ }
+
+ div ul li {
+     font-family: "Lato", sans-serif;
+     text-decoration: none;
+ }
+
+
+ #typewriter-text {
+     text-align: center;
+ }
+
+ .skilll ul {
+     list-style-type: none;
+
+ }
+
+
+ /* Making smooth another dashboard animation */
+
+
+ /* Define the reveal animation */
+ .reveal {
+     position: relative;
+     transform: translateY(150px);
+     opacity: 0;
+
+     /* transition: 2s all ease; */
+     transition: opacity 0.5s, transform 0.5s;
+ }
+
+ /* it will Activate the animation when in view */
+ .reveal.active {
+     transform: translateY(0);
+     opacity: 1;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ .cover {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     background-color: #f0f0f0;
+     /* Set your desired background color */
+ }
+
+ .below {
+     margin-top: 200vh;
+     /* Adjust this value to create space below the first two sections */
+     background-color: #ffffff;
+     /* Set your desired background color */
+ }
+
+
+
+ .wrapper-main {
+     margin: 0 auto;
+     width: 2000px;
+ }
+
+ 
+
+ .last_section {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+}
+
+.icons {
+    display: flex; /* Display the icons in a row */
+    gap: 20px; /* Add spacing between the icons */
+}
+
+.icons_for_contact {
+    /* Your existing styles for the icons */
+    width: 30px; /* Adjust the icon size as needed */
+    height: auto;
+}
